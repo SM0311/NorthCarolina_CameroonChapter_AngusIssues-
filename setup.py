@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "NorthCarolina_CameroonChapter_AngusIssues"
 AUTHOR_USER_NAME = "Omdena"
-SRC_REPO = "NorthCarolina_CameroonChapter_AngusIssues"
+SRC_REPO = "mlProject"
 AUTHOR_EMAIL = "omdena@gmail.com"
 
 
