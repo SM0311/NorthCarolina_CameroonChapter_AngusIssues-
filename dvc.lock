@@ -1,0 +1,36 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/mlProject/pipeline/stage_01_data_ingestion.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 34ef8658a3c567e558bde32e36979bb4
+      size: 630
+    - path: src/mlProject/pipeline/stage_01_data_ingestion.py
+      hash: md5
+      md5: 52b2d0a2de48e5fb90221633f1eb7466
+      size: 896
+    outs:
+    - path: artifacts/data_ingestion
+      hash: md5
+      md5: a689294ffa7244b1ffe574ffc2cd4670.dir
+      size: 398631
+      nfiles: 2
+  data_validation:
+    cmd: python src/mlProject/pipeline/stage_02_data_validation.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 34ef8658a3c567e558bde32e36979bb4
+      size: 630
+    - path: src/mlProject/pipeline/stage_02_data_validation.py
+      hash: md5
+      md5: ad2d5c506f8d0b5e61cfd8c8c6e896c0
+      size: 869
+    outs:
+    - path: artifacts/data_validation
+      hash: md5
+      md5: 0ccb3ea5849272ff03be5ab71786b9ff.dir
+      size: 23
+      nfiles: 1
