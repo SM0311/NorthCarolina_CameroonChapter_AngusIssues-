@@ -1,12 +1,12 @@
 COLUMNS:
-  Common Type of Seed: object
-  Daily Hay Dry matter (kg): int64
-  Daily Hay Intake Fresh (kg): int64
-  dry matter: float64
-  net energy for lactation of hay: float64
+  Cow : object 
+  Date : object 
+  Daily Hay Dry matter (kg): float64
+  hay intake fresh : float64
+
   
 
 
 TARGET_COLUMN:
-  Body Weight (kg): int64
+  Body Weight (kg): float64
   
