@@ -15,3 +15,12 @@ stages:
       - config/config.yaml
     outs:
       - artifacts/data_validation
+
+  
+  data_transformation:
+    cmd: python src/mlProject/pipeline/stage_03_data_transformation.py
+    deps:
+      - src/mlProject/pipeline/stage_03_data_transformation.py
+      - config/config.yaml
+    outs:
+      - artifacts/data_transformation
