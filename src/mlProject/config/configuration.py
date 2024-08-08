@@ -2,7 +2,8 @@ from mlProject.constants import *
 from mlProject.utils.common import read_yaml, create_directories
 from mlProject.entity.config_entity import (DataIngestionConfig,
                                                 DataValidationConfig,
-                                                DataTransformationConfig)
+                                                DataTransformationConfig,
+                                                ModelTrainerConfig)
 
 class ConfigurationManager:
     def __init__(
@@ -62,5 +63,22 @@ class ConfigurationManager:
 
         return data_transformation_config
 
+
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        config = self.config.model_trainer
+        params = self.params.ARIMA
+        schema = self.schema
+        target_column = list(self.schema['TARGET_COLUMN'].keys())[0]
+
+        model_trainer_config = ModelTrainerConfig(
+            root_dir=Path(config.root_dir),
+            train_data_path=Path(config.train_data_path),
+            test_data_path=Path(config.test_data_path),
+            model_name=config.model_name,
+            order=(params.p, params.d, params.q),
+            target_column=target_column
+        )
+
+        return model_trainer_config
     
 
