@@ -9,7 +9,7 @@ __version__ = "0.0.0"
 REPO_NAME = "NorthCarolina_CameroonChapter_AngusIssues"
 AUTHOR_USER_NAME = "Omdena"
 SRC_REPO = "mlProject"
-AUTHOR_EMAIL = "omdena@gmail.com"
+AUTHOR_EMAIL = "project@omdena.com"
 
 
 setuptools.setup(

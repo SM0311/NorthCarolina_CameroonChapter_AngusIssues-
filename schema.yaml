@@ -1,12 +1,17 @@
+
+# Define the columns in the dataset
 COLUMNS:
-  Cow : object 
-  Date : object 
+  # Unique identifier for each cow
+  Cow: string
+  # Date of measurement (in a standard format)
+  Date: date
+
+  # Dry matter intake from hay (kg)
   Daily Hay Dry matter (kg): float
-  hay intake fresh : float
+  # Fresh hay intake (amount or quantity)
+  hay intake fresh: float
 
-  
-
-
+# Define the target variable for prediction
 TARGET_COLUMN:
+  # Body weight of each cow (in kg)
   Body Weight (kg): float
-  
