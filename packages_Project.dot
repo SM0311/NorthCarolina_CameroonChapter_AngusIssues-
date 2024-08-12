@@ -1,0 +1,56 @@
+digraph "packages_Project" {
+rankdir=BT
+charset="utf-8"
+"NorthCarolina_CameroonChapter_AngusIssues" [color="black", label=<NorthCarolina_CameroonChapter_AngusIssues>, shape="box", style="solid"];
+"NorthCarolina_CameroonChapter_AngusIssues.app" [color="black", label=<NorthCarolina_CameroonChapter_AngusIssues.app>, shape="box", style="solid"];
+"NorthCarolina_CameroonChapter_AngusIssues.conf" [color="black", label=<NorthCarolina_CameroonChapter_AngusIssues.conf>, shape="box", style="solid"];
+"NorthCarolina_CameroonChapter_AngusIssues.main" [color="black", label=<NorthCarolina_CameroonChapter_AngusIssues.main>, shape="box", style="solid"];
+"NorthCarolina_CameroonChapter_AngusIssues.parse" [color="black", label=<NorthCarolina_CameroonChapter_AngusIssues.parse>, shape="box", style="solid"];
+"NorthCarolina_CameroonChapter_AngusIssues.setup" [color="black", label=<NorthCarolina_CameroonChapter_AngusIssues.setup>, shape="box", style="solid"];
+"NorthCarolina_CameroonChapter_AngusIssues.template" [color="black", label=<NorthCarolina_CameroonChapter_AngusIssues.template>, shape="box", style="solid"];
+"mlProject" [color="black", label=<mlProject>, shape="box", style="solid"];
+"mlProject.components" [color="black", label=<mlProject.components>, shape="box", style="solid"];
+"mlProject.components.data_ingestion" [color="black", label=<mlProject.components.data_ingestion>, shape="box", style="solid"];
+"mlProject.components.data_transformation" [color="black", label=<mlProject.components.data_transformation>, shape="box", style="solid"];
+"mlProject.components.data_validation" [color="black", label=<mlProject.components.data_validation>, shape="box", style="solid"];
+"mlProject.components.model_trainer" [color="black", label=<mlProject.components.model_trainer>, shape="box", style="solid"];
+"mlProject.config" [color="black", label=<mlProject.config>, shape="box", style="solid"];
+"mlProject.config.configuration" [color="black", label=<mlProject.config.configuration>, shape="box", style="solid"];
+"mlProject.constants" [color="black", label=<mlProject.constants>, shape="box", style="solid"];
+"mlProject.entity" [color="black", label=<mlProject.entity>, shape="box", style="solid"];
+"mlProject.entity.config_entity" [color="black", label=<mlProject.entity.config_entity>, shape="box", style="solid"];
+"mlProject.pipeline" [color="black", label=<mlProject.pipeline>, shape="box", style="solid"];
+"mlProject.pipeline.stage_01_data_ingestion" [color="black", label=<mlProject.pipeline.stage_01_data_ingestion>, shape="box", style="solid"];
+"mlProject.pipeline.stage_02_data_validation" [color="black", label=<mlProject.pipeline.stage_02_data_validation>, shape="box", style="solid"];
+"mlProject.pipeline.stage_03_data_transformation" [color="black", label=<mlProject.pipeline.stage_03_data_transformation>, shape="box", style="solid"];
+"mlProject.pipeline.stage_04_model_trainer" [color="black", label=<mlProject.pipeline.stage_04_model_trainer>, shape="box", style="solid"];
+"mlProject.utils" [color="black", label=<mlProject.utils>, shape="box", style="solid"];
+"mlProject.utils.common" [color="black", label=<mlProject.utils.common>, shape="box", style="solid"];
+"NorthCarolina_CameroonChapter_AngusIssues.main" -> "mlProject.pipeline.stage_03_data_transformation" [arrowhead="open", arrowtail="none"];
+"NorthCarolina_CameroonChapter_AngusIssues.main" -> "mlProject.pipeline.stage_04_model_trainer" [arrowhead="open", arrowtail="none"];
+"mlProject.components.data_ingestion" -> "mlProject" [arrowhead="open", arrowtail="none"];
+"mlProject.components.data_ingestion" -> "mlProject.entity.config_entity" [arrowhead="open", arrowtail="none"];
+"mlProject.components.data_ingestion" -> "mlProject.utils.common" [arrowhead="open", arrowtail="none"];
+"mlProject.components.data_transformation" -> "mlProject" [arrowhead="open", arrowtail="none"];
+"mlProject.components.data_transformation" -> "mlProject.entity.config_entity" [arrowhead="open", arrowtail="none"];
+"mlProject.components.data_validation" -> "mlProject" [arrowhead="open", arrowtail="none"];
+"mlProject.components.data_validation" -> "mlProject.entity.config_entity" [arrowhead="open", arrowtail="none"];
+"mlProject.components.model_trainer" -> "mlProject" [arrowhead="open", arrowtail="none"];
+"mlProject.components.model_trainer" -> "mlProject.entity.config_entity" [arrowhead="open", arrowtail="none"];
+"mlProject.config.configuration" -> "mlProject.constants" [arrowhead="open", arrowtail="none"];
+"mlProject.config.configuration" -> "mlProject.entity.config_entity" [arrowhead="open", arrowtail="none"];
+"mlProject.config.configuration" -> "mlProject.utils.common" [arrowhead="open", arrowtail="none"];
+"mlProject.pipeline.stage_01_data_ingestion" -> "mlProject" [arrowhead="open", arrowtail="none"];
+"mlProject.pipeline.stage_01_data_ingestion" -> "mlProject.components.data_ingestion" [arrowhead="open", arrowtail="none"];
+"mlProject.pipeline.stage_01_data_ingestion" -> "mlProject.config.configuration" [arrowhead="open", arrowtail="none"];
+"mlProject.pipeline.stage_02_data_validation" -> "mlProject" [arrowhead="open", arrowtail="none"];
+"mlProject.pipeline.stage_02_data_validation" -> "mlProject.components.data_validation" [arrowhead="open", arrowtail="none"];
+"mlProject.pipeline.stage_02_data_validation" -> "mlProject.config.configuration" [arrowhead="open", arrowtail="none"];
+"mlProject.pipeline.stage_03_data_transformation" -> "mlProject" [arrowhead="open", arrowtail="none"];
+"mlProject.pipeline.stage_03_data_transformation" -> "mlProject.components.data_transformation" [arrowhead="open", arrowtail="none"];
+"mlProject.pipeline.stage_03_data_transformation" -> "mlProject.config.configuration" [arrowhead="open", arrowtail="none"];
+"mlProject.pipeline.stage_04_model_trainer" -> "mlProject" [arrowhead="open", arrowtail="none"];
+"mlProject.pipeline.stage_04_model_trainer" -> "mlProject.components.model_trainer" [arrowhead="open", arrowtail="none"];
+"mlProject.pipeline.stage_04_model_trainer" -> "mlProject.config.configuration" [arrowhead="open", arrowtail="none"];
+"mlProject.utils.common" -> "mlProject" [arrowhead="open", arrowtail="none"];
+}
