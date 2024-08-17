@@ -1,5 +1,0 @@
-ARIMA:
-  p: 1           # Autoregressive order
-  d: 0           # Differencing order
-  q: 1           # Moving average order
-  
