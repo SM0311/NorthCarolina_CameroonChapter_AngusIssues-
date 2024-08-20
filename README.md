@@ -1,4 +1,5 @@
 # NorthCarolina_CameroonChapter_AngusIssues
+https://www.omdena.com/chapter-challenges/angus-issues-using-eda-and-forecasting-of-best-animal-science-practices
 
 "North Carolina, USA Chapter", "Cameroon Chapter" - Angus Issues: Using EDA and Forecasting of Best Animal Science Practices
 
